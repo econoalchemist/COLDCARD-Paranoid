@@ -10,6 +10,7 @@ This guide covers:
 - Verifying & updating firmware
 - Setting up a PIN
 - Generating a seed phrase with 256 bit of entropy by dice rolls
+- Creating a passphrase
 - Verifying the dice roll math
 - Air-gapped communication between ColdCard and [Sparrow Wallet](https://www.sparrowwallet.com/)
 - Steel plate backup demonstration
