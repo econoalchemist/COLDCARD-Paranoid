@@ -81,7 +81,7 @@ From that same web page, scroll down towards the bottom to the advanced section 
 
 <p align="center">
   <img width="403" height="216" src="Assets/Firmware3.png">
-  <img width="403" height="302" src="Assets/Firmware4.png">
+  <img width="403" height="295" src="Assets/Firmware4.png">
 </p>
 
 You want to save this PGP signed message as an `.asc` file, you can just hit `ctrl+s` from your web browser and you should be presented with a pop-up window like the one below. Make sure you have the `All Files (*.*)` option selected from the `Save as type:` drop-down menu. And then save the file with the `.asc` extension. You can leave it named `signatures`. 
