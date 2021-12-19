@@ -222,7 +222,7 @@ I did the following on a RaspberryPi in the CLI shell. The idea with the followi
 
 <p align="center">
   <img width="687" height="112" src="Assets/DiceRollTest1.png">
-  <img width="900" height="430" src="Assets/DiceRollTest1.png">
+  <img width="900" height="430" src="Assets/DiceRollTest2.png">
 </p>
 
 Now it has been verified that resulting hash value displayed on the ColdCard does in deed represent the numbers from the entered dice rolls. But how do we know the hash value really generates the same 24 words?
