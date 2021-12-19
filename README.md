@@ -254,8 +254,8 @@ Starting at the ColdCard main menu. Select `New Wallet` and after a moment you w
 Entropy is calculated by using: log2(6) = 2.58. Where the 6 is the number of sides on the dice. For reference, it would take the world's most powerful super computer trillions of years to brute force a 256 bit key. Roll the dice and enter the corresponding number for each roll. Repeat this process at least 99 times for the full 256 bits of entropy.
 
 <p align="center">
-  <img width="804" height="605" src="Assets/ZeroRolls.jpg">
-  <img width="804" height="605" src="Assets/NintyNinerolls.jpg">
+  <img width="454" height="341" src="Assets/ZeroRolls.jpg">
+  <img width="454" height="341" src="Assets/NintyNinerolls.jpg">
 </p>  
 
 Now you will be presented with a new list of 24 words. Write these words down on your notecard. Then double check your work. 
