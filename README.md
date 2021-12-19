@@ -116,7 +116,42 @@ Kleopatra will start calculating the veracity of the signature and after a momen
 
 At this point, you have verified that the PGP signed message containing the hash values for the firmware files was in fact signed by Doc Hex. But you now need to verify that the .dfu firmware file does in fact return the same hash value as the one in the signed message. 
 
-To do this, a freeware hex editing program called [HxD](https://mh-nexus.de/en/hxd/) is an easy to use tool. Simply navigate to "File" then select "Open" and navigate to the file path where you have the firmware .dfu file saved. Once opened, then navigate to "Analysis" then "Checksums" then scroll down to "SHA-256" and hit "OK". Then the software will return the calculated Sha256 hash value on the firmware file you downloaded. Visually compare this returned hash value with the hash value that you can look at in the signed message by opening it with a text editor.  
+To do this, a freeware hex editing program called [HxD](https://mh-nexus.de/en/hxd/) is a user-friendly tool. Once the application is downloaded and launched, simply navigate to `File` then select `Open` and navigate to the file path where you have the firmware `.dfu` file saved. Once opened, then navigate to `Analysis` then `Checksums` then scroll down to `SHA-256` and hit `OK`. Then the software will return the calculated Sha256 hash value on the firmware file you downloaded. Visually compare this returned hash value with the hash value that you can look at in the signed message by opening it with a text editor.
+
+<p align="center">
+  <img width="325" height="187" src="Assets/Firmware12.png">
+  <img width="325" height="195" src="Assets/Firmware13.png">
+  <img width="325" height="218" src="Assets/Firmware14.png">
+</p>
+
+Now you know that the firmware file you downloaded is an exact match to the file that CoinKite intended on you receiving and that it is safe to install on your new ColdCard. 
+
+Using a microSD card and a USB adaptor, insert them into your desktop. Once recognized, just drag and drop the firmware `.dfu` file onto the microSD card. Then safely eject the microSD card.
+
+<p align="center">
+  <img width="425" height="212" src="Assets/IMG_6248.JPG">
+  <img width="425" height="296" src="Assets/Firmware15.png">
+</p>
+
+Turn the ColdCard over and insert the microSD card into the slot until it clicks in place. 
+
+<p align="center">
+<img width="900" height="675" src="Assets/IMG_6249.JPG">
+</p>
+
+You should still be in the `Advanced` menu, then scroll down to `Upgrade Firmware` then `From MicroSD` then select the firmware file. This will take a moment to automatically load, verify and upgrade. 
+
+<p align="center">
+  <img width="403" height="302" src="Assets/FromMicroSD.JPG">
+  <img width="403" height="302" src="Assets/PickFirmWare.jpg">
+</p>
+
+<p align="center">
+  <img width="403" height="302" src="Assets/FirmwareFile.JPG">
+  <img width="403" height="302" src="Assets/Loading.JPG">
+</p>
+
+With the firmware now upgraded, you're ready to move on and set your PIN number. 
 
 ## Setting up a PIN
 Make careful considerations with your PIN number. You don't want to use one that is easy to guess. Your PIN will have two parts, a prefix and suffix. The idea is that once you enter the prefix, you will be presented with two anti-phishing words. If the words are the same as the words that were originally presented to you at initial startup, then you know that your ColdCard has not been tampered with since the last time you accessed it. 
