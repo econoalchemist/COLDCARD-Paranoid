@@ -80,7 +80,7 @@ From the CoinKite [website](https://coldcard.com/docs/upgrade), click on the lin
 From that same web page, scroll down towards the bottom to the advanced section and then click on the `this clear-signed text file` link. That link will open a PGP signed message containing the SHA256 hash values of various firmware versions.
 
 <p align="center">
-  <img width="403" height="302" src="Assets/Firmware3.png">
+  <img width="403" height="302" src="Assets/Firmware3T.png">
   <img width="403" height="302" src="Assets/Firmware4.png">
 </p>
 
