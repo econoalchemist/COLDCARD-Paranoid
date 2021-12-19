@@ -49,6 +49,8 @@ A great security feature of the ColdCard is that it can be used completely air-g
   <img width="403" height="302" src="Assets/IMG_5556.JPG">
 </p>
 
+Stay up to date on firmware releases, follow the Twitter account [@COLDCARDwallet](https://twitter.com/COLDCARDwallet), or bookmark the [Coinkite Blog](https://blog.coinkite.com/). Firmware upgrades provide new features, enhancements, bugfixes, and the latest security updates to your ColdCard. Firmware upgrade files have a `.dfu` file extension and should be approximately 690 kB in size. The abbreviation should be `20...-coldcard.dfu` to represent the full firmware file name. Make sure to use the full file name in your commands. ColdCards only load and run files signed by a CoinKite approved key.
+
 Once powered on, first read and accept the terms of sale & use. Then you will be asked to confirm the bag number. If there are any discrepancies, contact [support@coinkite.com](mailto:support@coinkite.com?subject=%5BContact%5D%20-%20).
 
 <p align="center">
@@ -67,7 +69,7 @@ Next, figure out which firmware version the ColdCard currently has on it by sele
   <img width="403" height="302" src="Assets/VersionNumber.JPG">
 </p>
 
-Even the firmware can be upgraded air-gapped by utilizing the microSD card. These steps will show you how to do that and verify the integrity of the firmware file on a Windows desktop using Kleopatra OpenPGP from the [GPG4win](https://www.gpg4win.org/download.html) bundle. The basic process here is to save the PGP signed hash value of the .dfu firmware file and verify it with [Doc Hex's PGP public key](https://twitter.com/dochex) and then calculate your own hash value on the firmware to confirm. 
+Even the firmware can be upgraded air-gapped by utilizing the microSD card. These steps will show you how to do that and verify the integrity of the firmware file on a Windows desktop using Kleopatra OpenPGP from the [GPG4win](https://www.gpg4win.org/download.html) bundle. If you are using a Linux distrobution, you will want to use [GnuPG](https://gnupg.org/download/index.html). Or if you are using a Mac, you will want to use [GPGtools](https://gpgtools.org/). You can also watch [this video tutorial](https://youtu.be/RYcB5HpfcaE). The basic process here is to save the PGP signed hash value of the `.dfu` firmware file and verify it with [Doc Hex's PGP public key](https://twitter.com/dochex) and then calculate your own hash value on the firmware to confirm. 
 
 From the CoinKite [website](https://coldcard.com/docs/upgrade), click on the link for the latest firmware version at the top of the page. This will automatically download a .dfu file. 
 
@@ -114,19 +116,19 @@ Kleopatra will start calculating the veracity of the signature and after a momen
   <img width="651" height="521" src="Assets/Firmware11.png">
 </p>
 
-At this point, you have verified that the PGP signed message containing the hash values for the firmware files was in fact signed by Doc Hex. But you now need to verify that the .dfu firmware file does in fact return the same hash value as the one in the signed message. 
+At this point, you have verified that the PGP signed message containing the hash values for the firmware files was in fact signed by Doc Hex. But you now need to verify that the `.dfu` firmware file does in fact return the same hash value as the one in the signed message. 
 
 To do this, a freeware hex editing program called [HxD](https://mh-nexus.de/en/hxd/) is a user-friendly tool. Once the application is downloaded and launched, simply navigate to `File` then select `Open` and navigate to the file path where you have the firmware `.dfu` file saved. Once opened, then navigate to `Analysis` then `Checksums` then scroll down to `SHA-256` and hit `OK`. Then the software will return the calculated Sha256 hash value on the firmware file you downloaded. Visually compare this returned hash value with the hash value that you can look at in the signed message by opening it with a text editor.
 
 <p align="center">
-  <img width="325" height="187" src="Assets/Firmware12.png">
-  <img width="325" height="195" src="Assets/Firmware13.png">
-  <img width="325" height="218" src="Assets/Firmware14.png">
+  <img width="315" height="183" src="Assets/Firmware12.png">
+  <img width="315" height="187" src="Assets/Firmware13.png">
+  <img width="315" height="208" src="Assets/Firmware14.png">
 </p>
 
 Now you know that the firmware file you downloaded is an exact match to the file that CoinKite intended on you receiving and that it is safe to install on your new ColdCard. 
 
-Using a microSD card and a USB adaptor, insert them into your desktop. Once recognized, just drag and drop the firmware `.dfu` file onto the microSD card. Then safely eject the microSD card.
+Using a microSD card (up to 32 GB capacity, FAT32 or FAT12 format) and a USB adaptor, insert them into your desktop. Once recognized, just drag and drop the firmware `.dfu` file onto the microSD card. Then safely eject the microSD card.
 
 <p align="center">
   <img width="425" height="212" src="Assets/IMG_6248.JPG">
