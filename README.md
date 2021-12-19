@@ -184,13 +184,65 @@ Next, enter your PIN suffix, then write it down on the notecard and hit `OK`.
   <img width="454" height="341" src="Assets/EnterSuffix2.jpg">
 </p>
 
-Then you will be asked to re-enter your PIN prefix, confirm the two anti-phishing words, and enter your PIN suffix. The ColdCard will save that information and then open up the wallet where you can generate your seed phrase.
+Then you will be asked to re-enter your PIN prefix, confirm the two anti-phishing words, and enter your PIN suffix. The ColdCard will save that information and then open up the wallet where you can generate your test seed phrase for verifying the dice roll math before generating your real seed phrase.
 
 ## Verifying the dice roll math
+In this section you will see how to verify that the ColdCard dice roll math is doing what it purports to be doing. Understanding that it is not advisable to use your actual dice rolls to validate the dice-roll math is important. Meaning that a user only should enter a few dice rolls, write them down, and generate the list of 24-words and then verify that information. This is only to satisfy one's curiosity that the ColdCard is producing a list of seed words that accurately represent the random dice rolls that the user entered. Once that curiosity has been satisfied, then the process should be repeated without typing the dice rolls into a computer. This could potentially result in loss of funds if any of the user's computer systems have been compromised. Typing seed words or dice rolls for an actual wallet that the user plans to fund is a bad idea. Simply use this information as a guide to understand that the ColdCard is doing what it purports to be doing and then do the actual wallet creation with information that is never typed into the computer. Another resource for the dice roll math verification can be found [here](https://coldcardwallet.com/docs/verifying-dice-roll-math).
 
+First, navigate to `Import Existing` then `Dice Rolls`.
+
+<p align="center">
+  <img width="454" height="341" src="Assets/IMG_E4804.JPG">
+  <img width="454" height="341" src="Assets/IMG_E4805.JPG">
+</p>
+
+Once there, the "0 rolls" screen will always be displayed with the hash value, `e3b0c... 27ae4... b855` since that is sha256 over an empty string. The keys 1-6 on the ColdCard can be used to enter the values that correspond to the results of each dice roll.
+
+<p align="center">
+  <img width="605" height="454" src="Assets/IMG_E4806.JPG">
+</p>
+
+Write down each dice roll as it is entered into the ColdCard. Do as many rolls as it takes to satisfy your curiosity. In this example, 100 dice rolls. 
+
+<p align="center">
+  <img width="605" height="454" src="Assets/IMG_E4812.JPG">
+</p>
+
+With a pen & notepad, start rolling the dice, writing down the number 1-6, and entering the number on the ColdCard. Repeat 50 times for 128 bits of entropy or 99 times for 256 bits of entropy. Entropy is calculated by using log2(6^99) = 255.9.
+
+Now that the dice rolls have been copied to the notebook and entered into the ColdCard, see what 24-word seed phrase the ColdCard comes up with by selecting `OK` on the ColdCard, the list of 24-words should then be presented. Also write these along with the dice rolls.
+
+<p align="center">
+  <img width="900" height="644" src="Assets/DiceRollTest.png">
+</p>
+
+I did the following on a RaspberryPi in the CLI shell. The idea with the following command is to verify the sha256 has value of the entered dice roll. In my example, my dice roll was 100 numbers in length and the resulting hash value was a match compared to the one displayed on the ColdCard when I reached 100 rolls. So enter the following command in your terminal replacing `123456` with the dice rolls your wrote down. 
+
+`$ echo -n 123456 | sha256sum`
+
+<p align="center">
+  <img width="687" height="112" src="Assets/DiceRollTest1.png">
+  <img width="900" height="430" src="Assets/DiceRollTest1.png">
+</p>
+
+Now it has been verified that resulting hash value displayed on the ColdCard does in deed represent the numbers from the entered dice rolls. But how do we know the hash value really generates the same 24 words?
+
+The ideal environment to perform this checking is a computer running Tails - [The Amnesic Incognito Live System](https://tails.boum.org/), preferable without any network connection and no hard drives. Do not use your actual dice rolls on a normal desktop system as that will completely comprise the security of your ColdCard!
+
+Simply navigate to: https://coldcardwallet.com/docs/rolls.py and save the script. From the command line terminal, change directories to where you saved it. Once there, run the following command with same dice rolls used on the first command, again replacing '123456' with the dice rolls you wrote down.
+
+`$ echo 123456 | python3 rolls.py`
+
+The returned data will be a list of 24 words that should match the ones written in the notebook.
+
+<p align="center">
+  <img width="691" height="516" src="Assets/DiceRollSeed.png">
+</p>
+
+Now the 24-word seed phrase has been independently verified and the ColdCard can be trusted to be doing what it purports to be doing. Once your curiosity has been satisfied that everything is working as expected and advertised, now repeat the process with you actual dice rolls on the ColdCard and do not enter them into the computer when you're done.
 
 ## Generating a seed phrase
-There are a couple considerations you may want to make when creating a seed phrase. For example, ColdCard will generate a seed phrase for you by default, as shown in the [Ultra Quick guide](https://github.com/econoalchemist/ColdCard-UltraQuick). However, maybe you don't trust the True Random Number Generator (TRNG) in your ColdCard, you can introduce some of your own randomness using a six sided dice and combine that with the ColdCard's TRNG entropy as demonstrated in the [Middle Ground guide](https://github.com/econoalchemist/ColdCard-MiddleGround). In this guide though, you'll see how to generate a full 256 bits of entropy with dice rolls.
+There are a couple considerations you may want to make when creating a seed phrase. For example, ColdCard will generate a seed phrase for you by default, as shown in the [Ultra Quick guide](https://github.com/econoalchemist/ColdCard-UltraQuick). However, maybe you don't trust the True Random Number Generator (TRNG) in your ColdCard, you can introduce some of your own randomness using a six sided dice and combine that with the ColdCard's TRNG entropy as demonstrated in the [Middle Ground guide](https://github.com/econoalchemist/ColdCard-MiddleGround). In this guide though, you'll see how to generate a full 256 bits of entropy with dice rolls now that you know the ColdCard is not up to any funny business.
 
 Starting at the ColdCard main menu. Select `New Wallet` and after a moment you will be presented with 24 words. However, to add some of your own dice roll randomness, scroll down to the bottom of the word list and select `4` to add some dice rolls.
 
