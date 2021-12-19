@@ -16,7 +16,7 @@ This guide covers:
 - Steel plate backup demonstration
 
 ## Checking the tamper-evident bag:
-Upon receiving your ColdCard, ensure that the tamper-evident bag has not been compromised. If anything seems amiss or if you have any problems contact [support@coinkite.com.](mailto:support@coinkite.com?subject=%5BContact%5D%20-%20). Visually inspect the surfaces and edges of the bag for indications of tampering, openings, or damage. The concern is being victim of a supply chain attack in which your ColdCard gets intercepted in transit and modified in a way that puts your funds at risk. Ensuring the integrity of the tamper-evident bag is the first step in mitigating this type of sophisticated attack. 
+Upon receiving your ColdCard, ensure that the tamper-evident bag has not been compromised. If anything seems amiss or if you have any problems contact [support@coinkite.com](mailto:support@coinkite.com?subject=%5BContact%5D%20-%20). Visually inspect the surfaces and edges of the bag for indications of tampering, openings, or damage. The concern is being victim of a supply chain attack in which your ColdCard gets intercepted in transit and modified in a way that puts your funds at risk. Ensuring the integrity of the tamper-evident bag is the first step in mitigating this type of sophisticated attack. 
 
 <p align="center">
   <img width="400" height="300" src="Assets/Bag0.png">
