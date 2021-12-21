@@ -319,11 +319,17 @@ The first step is to add Craig's PGP public key to your keychain. You can downlo
   <img width="950" height="496" src="Assets/Sparrow38.png">
 </p>
 
+Once you have the certificate import complete, navigate to the [Sparrow Wallet download page](https://sparrowwallet.com/download/) where you will want to download the appropriate Sparrow Wallet filefor your operating system as well as the `Manifest` & `Manifest Signature` files. 
 
+<p align="center">
+  <img width="950" height="481" src="Assets/Sparrow39.png">
+</p>  
 
+With those files saved in the same file directory, right-click on the `Sparrow-x.x.x-Manifest.txt` file then `More GpgEX options` > `Verify`. 
 
-
-
+<p align="center">
+  <img width="950" height="481" src="Assets/Sparrow40.png">
+</p> 
 
 Next we'll set it up as a "watch-only" wallet in Sparrow Wallet and demonstrate how to transact in an air-gapped fashion. 
 
