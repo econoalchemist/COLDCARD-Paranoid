@@ -283,7 +283,7 @@ Important to note is that any passphrase entered will generate a fully functiona
 
 When you add a passphrase to a 24-word seed phrase, the new wallet will have its own fingerprint. This fingerprint can be used to verify that you have entered your passphrase correctly. You can start to see how this adds some complexity to securing your bitcoin. Keep this in mind and what your threat model is. Ask yourself how you will secure your recovery information, and how your loved ones would recovery your bitcoin if you were gone.
 
-From the main menu, select `Passphrase`, then you will see a short explanation that warns you about how passphrases are not recoverable so if you lose your passphrase then you will lose access to your funds. It also warns you that any passphrase you enter will generate a completely separate wallet. After reading through the warning select <kbd>OK</kbd> to continue, then you have a few options of passphrases you can enter: 
+From the main menu, select `Passphrase`, then you will see a short explanation that warns you about how passphrases are not recoverable so if you lose your passphrase then you will lose access to your funds. It also warns you that any passphrase you enter will generate a completely separate wallet. After reading through the warning select <kbd>OK</kbd> to continue, then select `Edit Phrase` and you have a few options of passphrases you can enter: 
 
 * Choose any assortment of characters, for example: &BBq*$@R^!%nu6Y5
 * Choose from lowercase words, for example: alarm wool culture nothing exercise
@@ -304,6 +304,24 @@ Once you have entered the passphrase you want, select `APPLY` then you will be p
   <img width="450" height="338" src="Assets/IMG_5707.JPG">
   <img width="450" height="338" src="Assets/IMG_5715.JPG">
 </p>
+
+At this point, it is best practice to double check your work by trying to regenerate this fingerprint. If you have properly documented everything, then you should be able to log out of the ColdCard, power it down, power it back on, log in again, re-apply the passphrase and get the same fingerprint from the wallet. If everything checksout then make sure you secure your passphrase and your 24-word seed phrase in a way that satisfies your unique threat model. 
+
+Next, you will see how to download and verify Sparrow Wallet. 
+
+## Verifying the Sparrow Wallet Download
+In this section you will see how to verify the integrity of the Sparrow Wallet download on a Windows desktop using Kleopatra OpenPGP from the [GPG4win](https://www.gpg4win.org/download.html) bundle. If you are using a Linux distrobution, you will want to use [GnuPG](https://gnupg.org/download/index.html). Or if you are using a Mac, you will want to use [GPGtools](https://gpgtools.org/). The basic process here is to save the PGP signed hash values of the releases and verify them with [Craig Raw's](https://twitter.com/craigraw) PGP public key and then calculate your own hash value on the firmware file to confirm.
+
+The first step is to add Craig's PGP public key to your keychain. You can download his public key from KeyBase [here](https://keybase.io/craigraw/). If you are using Kleopatra, you can just copy the PGP public key to your clipboard and then navigate to `Tools` > `Clipboard` > `Certificate Import`. Then you can certify the PGP public key. 
+
+<p align="center">
+  <img width="950" height="688" src="Assets/Sparrow37.png">
+  <img width="950" height="496" src="Assets/Sparrow38.png">
+</p>
+
+
+
+
 
 
 
