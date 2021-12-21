@@ -328,8 +328,14 @@ Once you have the certificate import complete, navigate to the [Sparrow Wallet d
 With those files saved in the same file directory, right-click on the `Sparrow-x.x.x-Manifest.txt` file then `More GpgEX options` > `Verify`. 
 
 <p align="center">
-  <img width="950" height="481" src="Assets/Sparrow40.png">
+  <img width="950" height="667" src="Assets/Sparrow40.png">
 </p> 
+
+Then Kleopatra will verify the signature of the `Manifest` file against the certified PGP public key you imported and produce a valid result. 
+
+<p align="center">
+  <img width="500" height="401" src="Assets/Sparrow41.png">
+</p>
 
 Next we'll set it up as a "watch-only" wallet in Sparrow Wallet and demonstrate how to transact in an air-gapped fashion. 
 
