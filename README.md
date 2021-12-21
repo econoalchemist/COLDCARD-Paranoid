@@ -350,7 +350,7 @@ Now you can double-click on the Sparrow Wallet `.exe` file and launch the instal
 Next we'll get the ColdCard configured as a "watch-only" wallet in Sparrow Wallet and demonstrate how to transact in an air-gapped fashion. 
 
 ## Connecting ColdCard to Sparrow Wallet
-In this section you will see how to connect your ColdCard to Sparrow Wallet using a your own Electrum Rust Server. If you don't have your own Electrum Rust Server, you can use BitcoinCore as a backend as demonstrated in the [MiddleGround guide](https://github.com/econoalchemist/ColdCard-MiddleGround). However, BitcoinCore stores your wallet balances and xpub unencrypted on your desktop. Or if you don't have your own Bitcoin node, you can use reputable public Electrum servers as demonstrated in the [UltraQuick guide](https://github.com/econoalchemist/ColdCard-UltraQuick). However, there are privacy tradeoffs that come with using the convenience of a public Electrum server. Luckily there are a number of resources avilable to help you spin up your own Bitcoin node, to learn more check out:
+In this section you will see how to connect your ColdCard to Sparrow Wallet using a your own Electrum Rust Server connected over Tor. If you don't have your own Electrum Rust Server, you can use BitcoinCore as a backend as demonstrated in the [MiddleGround guide](https://github.com/econoalchemist/ColdCard-MiddleGround). However, BitcoinCore stores your wallet balances and xpub unencrypted on your desktop. Or if you don't have your own Bitcoin node, you can use reputable public Electrum servers as demonstrated in the [UltraQuick guide](https://github.com/econoalchemist/ColdCard-UltraQuick). However, there are privacy tradeoffs that come with using the convenience of a public Electrum server. Luckily there are a number of resources avilable to help you spin up your own Bitcoin node, to learn more check out:
 
 - [RaspiBlitz](https://github.com/rootzoll/raspiblitz)
 - [Bitcoin.org](https://bitcoin.org/en/bitcoin-core/)
@@ -362,29 +362,33 @@ In this guide, RaspiBlitz will be demonstrated as the provider of the Electrum R
 Since RaspiBlitz is running on a remote computer, you need to SSH into the RaspberryPi and gather some information. First, you need to initiate Electrum Rust Server which can take several hours as it indexes the entire blockchain. From your RaspiBlitz main menu, scroll down to and select `SERVICES`> `BTC Electrum Rust Server`. Then follow the prompts to initiate the indexing and give the operation plenty of time to run.   
 
 <p align="center">
-  <img width="670" height="425" src="Assets/Sparrow20.png">
-  <img width="670" height="425" src="Assets/Sparrow20.png">
+  <img width="670" height="425" src="Assets/Sparrow43.png">
+  <img width="670" height="425" src="Assets/Sparrow44.png">
 </p>
 
-
-
-Save those changes and then you should be able to connect to your BircoinCore node from your computer on the same local network. Make sure you restart BitcoinCore after saving those changes. 
-
-Now you are ready to configure Sparrow Wallet to talk to your BitcoinCore node. Once you have Sparrow Wallet installed and launched, you will be presented with an empty user interface. Navigate to `File` > `Preferences`.
+After Electrum Rust Server is initialized and indexed, you will notice that there is a new `ELECTRS` option on your RaspiBlitz main menu. Select that menu option.  
 
 <p align="center">
-  <img width="814" height="611" src="Assets/Sparrow0.png">
+  <img width="670" height="425" src="Assets/Sparrow45.png">
 </p>
 
-Then click on the <kbd>Server</kbd> tab on the left-hand side. Click on the <kbd>Bitcoin Core</kbd> tab for the `Server Type`. If running BitcoinCore on the same computer, use the `127.0.0.1` rpcbind IP address with `8332` as the port and the default authentication option. Or if running BitcoinCore on a different computer, use the same User/Pass that you entered in the `bitcoin.conf` file. Either way, set the Data Folder directory to the same folder the `bitcoin.conf` file is being written. This should be the same directory that BitcoinCore writes the `.cookie` file that Sparrow Wallet needs to read. Test the network connection from Sparrow Wallet. If it’s good, you should see the green check mark next to <kbd>Test Connection</kbd> and some information populated in the dialog box below that. Then you can close that window.   
+Next you will see the option to `CONNECT`, select that option and you will be presented with the necessary information that is needed to enter into the Sparrow Wallet server configuration. You want to copy the entire `.onion` URL and observe the port number, typically `50002`. This is the information you will put in the Sparrow Wallet server configuration. The `.onion` URL has been censored for privacy reasons in the photos below, this is information you want to keep private.
 
 <p align="center">
-  <img width="752" height="662" src="Assets/Sparrow21.png">
+  <img width="667" height="423" src="Assets/Sparrow46.png">
+  <img width="669" height="425" src="Assets/Sparrow47.png">
 </p>
 
-Unfortunately, BitcoinCore stores your public keys and balances unencrypted on the computer it is running on. Although your bitcoin are not directly at risk of theft, if this computer is regularly connected to the internet, it is at risk to hackers - which has the potential to make you a target if your balance and geographic location are discovered. To learn more about Sparrow Wallet best practices, check out [this Sparrow Wallet resource](https://www.sparrowwallet.com/docs/best-practices.html) guide. 
+With Sparrow Wallet launched, navigate to `File` > `Preferences` then click on the <kbd>Server</kbd> tab on the left-hand side. Click on the <kbd>Private Electrum</kbd> tab for the `Server Type` then paste the `.onion` URL and enter the port number. Test the network connection from Sparrow Wallet. If it’s good, you should see the green check mark next to <kbd>Test Connection</kbd> and some information populated in the dialog box below that. Then you can close that window.
 
-Now that Sparrow Wallet is connected with BitcoinCore, this is a good time to get the watch-only wallet file exported from the ColdCard. Then it can be imported to Sparrow Wallet. So connect your ColdCard to the ColdPower adaptor and log into the ColdCard. 
+<p align="center">
+  <img width="950" height="713" src="Assets/Sparrow0.png">
+  <img width="950" height="661" src="Assets/Sparrow48.png">
+</p>
+
+Sparrow Wallet is now configured to use your private Electrum Rust Server as a backend over Tor. To learn more about Sparrow Wallet best practices, check out [this Sparrow Wallet resource](https://www.sparrowwallet.com/docs/best-practices.html) guide. 
+
+Now that Sparrow Wallet is connected with Electrum Rust Sever, this is a good time to get the watch-only wallet file exported from the ColdCard. Then it can be imported to Sparrow Wallet. So connect your ColdCard to the ColdPower adaptor and log into the ColdCard. 
 
 In order to keep your ColdCard air-gapped, the Partially Signed Bitcoin Transaction (PSBT) can be utilized to spend bitcoin from the ColdCard without ever connecting it to the internet. Basically, the public information from the ColdCard called an XPUB will be used to import the necessary information into Sparrow Wallet on our desktop. By doing this, Sparrow Wallet will be able to generate receive addresses and QR codes, monitor the ColdCard's balance, and initiate PSBT's. All without exposing any of the private information from the ColdCard, like the signing key. 
 
