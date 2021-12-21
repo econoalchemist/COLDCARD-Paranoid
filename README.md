@@ -379,7 +379,7 @@ Next you will see the option to `CONNECT`, select that option and you will be pr
   <img width="669" height="425" src="Assets/Sparrow47.png">
 </p>
 
-With Sparrow Wallet launched, navigate to `File` > `Preferences` then click on the <kbd>Server</kbd> tab on the left-hand side. Click on the <kbd>Private Electrum</kbd> tab for the `Server Type` then paste the `.onion` URL and enter the port number. Test the network connection from Sparrow Wallet. If it’s good, you should see the green check mark next to <kbd>Test Connection</kbd> and some information populated in the dialog box below that. Then you can close that window.
+Ensure that you have your Tor browser open and connected. Also launch Sparrow Wallet and then navigate to `File` > `Preferences` then click on the <kbd>Server</kbd> tab on the left-hand side. Click on the <kbd>Private Electrum</kbd> tab for the `Server Type` then paste the `.onion` URL and enter the port number. Test the network connection from Sparrow Wallet. If it’s good, you should see the green check mark next to <kbd>Test Connection</kbd> and some information populated in the dialog box below that. Then you can close that window.
 
 <p align="center">
   <img width="950" height="713" src="Assets/Sparrow0.png">
@@ -394,7 +394,7 @@ In order to keep your ColdCard air-gapped, the Partially Signed Bitcoin Transact
 
 You will use the microSD card to transfer information between the desktop and the ColdCard. Ensure the microSD card is inserted to the ColdCard. 
 
-First, the `.json` file needs to be exported from the ColdCard, which will contain all the public information necessary so that Sparrow Wallet can import this watch-only wallet. From the ColdCard main menu select `Advanced` > `MicroSD Card` > `Export Wallet` > `Generic JSON`. 
+First, the `.json` file needs to be exported from the ColdCard, which will contain all the public information necessary so that Sparrow Wallet can import this watch-only wallet. From the ColdCard main menu select `Advanced` > `MicroSD Card` > `Export Wallet` > `Generic JSON`. You can leave the account number blank.  
 
 <p align="center">
   <img width="400" height="352" src="Assets/IMG_5780.JPG">
@@ -408,39 +408,39 @@ First, the `.json` file needs to be exported from the ColdCard, which will conta
 
 This is going to write the file to the microSD card, then you can connect that microSD card to your desktop computer with your USB adaptor. Copy/paste the exported `.json` file to your desktop from the microSD card. Notate the file location and now you will switch back to Sparrow Wallet to get it ready to import the `.json` file. 
 
-In Sparrow Wallet, create a new wallet by selecting `File` > `New Wallet`, then you will be asked to name this wallet. Name the wallet whatever you want then click on <kbd>Create Wallet</kbd>. You will notice in the Sparrow Wallet interface lower right-hand corner that the color has changed to green on the toggle switch. This indicates that your wallet is using your instance of BitcoinCore as the back end.
+In Sparrow Wallet, create a new wallet by selecting `File` > `New Wallet`, then you will be asked to name this wallet. Name the wallet whatever you want then click on <kbd>Create Wallet</kbd>. You will notice in the Sparrow Wallet interface lower right-hand corner that the color has changed to blue on the toggle switch. This indicates that your wallet is using your instance of Electrum Rust Server as the back end.
 
 <p align="center">
-  <img width="814" height="611" src="Assets/Sparrow22.png">
+  <img width="814" height="611" src="Assets/Sparrow49.png">
 </p>
 
 You will see the following screen, you can leave all the settings on the defaults. Then select <kbd>Airgapped Hardware Wallet</kbd>. 
 
 <p align="center">
-  <img width="814" height="611" src="Assets/Sparrow23.png">
+  <img width="814" height="611" src="Assets/Sparrow50.png">
 </p>
 
 A screen will pop up and you can click on the <kbd>Import File...</kbd> button next to the ColdCard icon. This will open your file explorer where you can point Sparrow Wallet to the file location containing the exported ColdCard `.json` file. Select that file and click on <kbd>open</kbd>. 
 
 <p align="center">
-  <img width="452" height="339" src="Assets/Sparrow24.png">
+  <img width="452" height="339" src="Assets/Sparrow51.png">
 </p>
 
 After a moment, you will see a summary of the wallet you are about to apply. You will notice a "Master fingerprint" dialog box with 8-characters in it. You can use this unique identifier to confirm that you are importing the correct wallet from your ColdCard. 
 
-On your ColdCard, from the main menu, navigate down to `Advanced` > `View Identity` and you can compare the displayed fingerprint to the one displayed in Sparrow Wallet. This is especially important to confirm if you have added a passphrase which will be covered in the [Paranoid guide](https://github.com/econoalchemist/ColdCard-Paranoid)
+On your ColdCard, from the main menu, navigate down to `Advanced` > `View Identity` and you can compare the displayed fingerprint to the one displayed in Sparrow Wallet. This is especially important to confirm if you have added a passphrase which will be covered in the [Paranoid guide](https://github.com/econoalchemist/ColdCard-Paranoid).
 
 If everything looks good, then click on <kbd>Apply</kbd> in Sparrow Wallet. 
 
 <p align="center">
-  <img width="814" height="611" src="Assets/Sparrow25.png">
+  <img width="814" height="611" src="Assets/Sparrow52.png">
   <img width="814" height="350" src="Assets/Sparrow26.png">
 </p>
 
 After clicking on <kbd>Apply</kbd>, you will have the opportunity to add a password to your wallet. This is a password which will encrypt the Sparrow Wallet data file that is saved on your computer. This password can protect your wallet if someone else gains access to your desktop and Sparrow Wallet file. If you forget your password, you will need to create a new wallet file by repeating this whole process. 
 
 <p align="center">
-  <img width="814" height="611" src="Assets/Sparrow27.png">
+  <img width="814" height="611" src="Assets/Sparrow53.png">
 </p>
 
 After applying the changes, you can now navigate through your watch-only wallet in Sparrow Wallet. On the left-hand side of the Sparrow Wallet interface there are six tabs. The <kbd>Transactions</kbd> tab is where you can see information related to the transactions in this watch-only wallet. The <kbd>Send</kbd> tab is where you can create the PSBTs to then export for signing by the ColdCard. The <kbd>Receive</kbd> tab is where you can generate receive address for your ColdCard without having to plug in your ColdCard and log into it. The <kbd>Addresses</kbd> tab shows several deposit and change addresses as well as any balances. The <kbd>UTXOs</kbd> tab shows any unspent transaction outputs and a small graph charting the history. Finally, the <kbd>Settings</kbd> tab is where you can see detailed information about the watch-only wallet such as the master fingerprint, derivation path, & xpub.   
@@ -448,9 +448,9 @@ After applying the changes, you can now navigate through your watch-only wallet 
 Now you can click on the <kbd>Receive</kbd> tab on the left-hand side of the Sparrow Wallet interface. Then you will be presented with a bitcoin receiving address, a QR code, and some additional details. You can scan this QR code with your mobile Bitcoin wallet, for example, and deposit some bitcoin to your ColdCard. You should see the transaction show up in Sparrow Wallet after a moment along with a pop-up notification. Also, in BitcoinCore, the transactions should show up there as well. The transaction will remain in a pending status until it receives some blockchain confirmations. In the mean-time, you can click on the <kbd>Transactions</kbd> tab and review further details about your transaction. You can also copy/paste your transaction ID in [mempool.space](https://mempool.space/) to watch for your first confirmation, or use whatever your preferred block explorer is. [Tor Browser](https://www.torproject.org/download/) is a privacy-focused browser.  
 
 <p align="center">
-  <img width="950" height="405" src="Assets/Sparrow28.png">
-  <img width="950" height="676" src="Assets/Sparrow29.png">
-  <img width="950" height="399" src="Assets/Sparrow30.png">
+  <img width="950" height="729" src="Assets/Sparrow54.png">
+  <img width="950" height="661" src="Assets/Sparrow55.png">
+  <img width="950" height="331" src="Assets/Sparrow56.png">
   </p>
 
 Now you can power off and secure your ColdCard in a safe place until you want to sign a transaction and spend from it, several addresses will be cataloged in Sparrow Wallet so you can continue depositing to your ColdCard via Sparrow Wallet without having to reconnect it every time. It is best practice to confirm each receiving address on the ColdCard itself and also to only use each address once. 
