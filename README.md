@@ -12,7 +12,8 @@ This guide covers:
 - Verifying the dice roll math
 - Generating a seed phrase with 256 bit of entropy by dice rolls
 - Creating a passphrase
-- Air-gapped communication between ColdCard and [Sparrow Wallet](https://www.sparrowwallet.com/)
+- Verifying the [Sparrow Wallet](https://www.sparrowwallet.com/) download
+- Air-gapped communication & transacting between ColdCard and Sparrow Wallet
 - Steel plate backup demonstration
 
 ## Checking the tamper-evident bag:
