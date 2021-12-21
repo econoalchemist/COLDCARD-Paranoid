@@ -43,14 +43,14 @@ If everything looks good, then you are ready to power on your new ColdCard and g
 </p>
 
 ## Verifying & updating firmware
+Stay up to date on firmware releases, follow the Twitter account [@COLDCARDwallet](https://twitter.com/COLDCARDwallet), or bookmark the [Coinkite Blog](https://blog.coinkite.com/). Firmware upgrades provide new features, enhancements, bugfixes, and the latest security updates to your ColdCard. Firmware upgrade files have a `.dfu` file extension and should be approximately 690 kB in size. The abbreviation should be `20...-coldcard.dfu` to represent the full firmware file name. Make sure to use the full file name in your commands. ColdCards only load and run files signed by a CoinKite approved key.
+
 A great security feature of the ColdCard is that it can be used completely air-gapped. Meaning that you never have to connect it to a computer, although the option to is there if you choose to use it. You can use a standard USB outlet transformer or even a 9v battery with the ColdPower adaptor, which CoinKite offers [here](https://store.coinkite.com/store/cldpwr). To power on the ColdCard simply connect a USB to micro-USB [cable](https://store.coinkite.com/store/category/accessories) to the port on top of the ColdCard and the other end to the USB port on your ColdPower adaptor & 9v battery.
 
 <p align="center">
   <img width="403" height="302" src="Assets/IMG_5557.JPG">
   <img width="403" height="302" src="Assets/IMG_5556.JPG">
 </p>
-
-Stay up to date on firmware releases, follow the Twitter account [@COLDCARDwallet](https://twitter.com/COLDCARDwallet), or bookmark the [Coinkite Blog](https://blog.coinkite.com/). Firmware upgrades provide new features, enhancements, bugfixes, and the latest security updates to your ColdCard. Firmware upgrade files have a `.dfu` file extension and should be approximately 690 kB in size. The abbreviation should be `20...-coldcard.dfu` to represent the full firmware file name. Make sure to use the full file name in your commands. ColdCards only load and run files signed by a CoinKite approved key.
 
 Once powered on, first read and accept the terms of sale & use. Then you will be asked to confirm the bag number. If there are any discrepancies, contact [support@coinkite.com](mailto:support@coinkite.com?subject=%5BContact%5D%20-%20).
 
