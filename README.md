@@ -43,7 +43,7 @@ If everything looks good, then you are ready to power on your new ColdCard and g
 </p>
 
 ## Verifying & updating firmware
-Stay up to date on firmware releases, follow the Twitter account [@COLDCARDwallet](https://twitter.com/COLDCARDwallet), or bookmark the [Coinkite Blog](https://blog.coinkite.com/). Firmware upgrades provide new features, enhancements, bugfixes, and the latest security updates to your ColdCard. Firmware upgrade files have a `.dfu` file extension and should be approximately 690 kB in size. The abbreviation should be `20...-coldcard.dfu` to represent the full firmware file name. Make sure to use the full file name in your commands. ColdCards will only load and run files signed by a CoinKite approved key.
+Stay up to date on firmware releases, follow the Twitter account [@COLDCARDwallet](https://twitter.com/COLDCARDwallet), or bookmark the [Coinkite Blog](https://blog.coinkite.com/). Firmware upgrades provide new features, enhancements, bug fixes, and the latest security updates to your ColdCard. Firmware upgrade files have a `.dfu` file extension and should be approximately 690 kB in size. The abbreviation should be `20...-coldcard.dfu` to represent the full firmware file name. Make sure to use the full file name in your commands. ColdCards will only load and run files signed by a CoinKite approved key.
 
 A great security feature of the ColdCard is that it can be used completely air-gapped. Meaning that you never have to connect it to a computer, although the option to is there if you choose to use it. You can use a standard USB outlet transformer or even a 9v battery with the ColdPower adaptor, which CoinKite offers [here](https://store.coinkite.com/store/cldpwr). To power on the ColdCard simply connect a USB to micro-USB [cable](https://store.coinkite.com/store/category/accessories) to the port on top of the ColdCard and the other end to the USB port on your ColdPower adaptor & 9v battery and flip the switch on the side of the ColdPower adaptor.
 
@@ -70,7 +70,7 @@ Next, figure out which firmware version the ColdCard currently has on it by sele
   <img width="403" height="302" src="Assets/VersionNumber.JPG">
 </p>
 
-Even the firmware can be upgraded air-gapped by utilizing the microSD card. These steps will show you how to do that and verify the integrity of the firmware file on a Windows desktop using Kleopatra OpenPGP from the [GPG4win](https://www.gpg4win.org/download.html) bundle. If you are using a Linux distrobution, you will want to use [GnuPG](https://gnupg.org/download/index.html). Or if you are using a Mac, you will want to use [GPGtools](https://gpgtools.org/). You can also watch [this video tutorial](https://youtu.be/RYcB5HpfcaE). The basic process here is to save the PGP signed hash value of the `.dfu` firmware file and verify it with [Doc Hex's PGP public key](https://twitter.com/dochex) and then calculate your own hash value on the firmware file to confirm. 
+Even the firmware can be upgraded air-gapped by utilizing the microSD card. These steps will show you how to do that and verify the integrity of the firmware file on a Windows desktop using Kleopatra OpenPGP from the [GPG4win](https://www.gpg4win.org/download.html) bundle. If you are using a Linux distribution, you will want to use [GnuPG](https://gnupg.org/download/index.html). Or if you are using a Mac, you will want to use [GPGtools](https://gpgtools.org/). You can also watch [this video tutorial](https://youtu.be/RYcB5HpfcaE). The basic process here is to save the PGP signed hash value of the `.dfu` firmware file and verify it with [Doc Hex's PGP public key](https://twitter.com/dochex) and then calculate your own hash value on the firmware file to confirm. 
 
 From the CoinKite [website](https://coldcard.com/docs/upgrade), click on the link for the latest firmware version at the top of the page. This will automatically download a .dfu file. 
 
@@ -127,7 +127,7 @@ To do this, a freeware hex editing program called [HxD](https://mh-nexus.de/en/h
   <img width="315" height="208" src="Assets/Firmware14.png">
 </p>
 
-Now you know that the firmware file you downloaded is an exact match to the file that CoinKite intended on you receiving and that it is safe to install on your new ColdCard. 
+Now you know that the firmware file you downloaded is an exact match to the file that CoinKite intended you receive and that it is safe to install on your new ColdCard. 
 
 Using a microSD card (up to 32 GB capacity, FAT32 or FAT12 format) and a USB adaptor, insert them into your desktop. Once recognized, just drag and drop the firmware `.dfu` file onto the microSD card. Then safely eject the microSD card.
 
@@ -226,7 +226,7 @@ I did the following on a RaspberryPi in the CLI shell. The idea with the followi
   <img width="900" height="430" src="Assets/DiceRollTest2.png">
 </p>
 
-Now it has been verified that resulting hash value displayed on the ColdCard does in deed represent the numbers from the entered dice rolls. But how do we know the hash value really generates the same 24 words?
+Now it has been verified that the resulting hash value displayed on the ColdCard does indeed represent the numbers from the entered dice rolls. But how do we know the hash value really generates the same 24 words?
 
 The ideal environment to perform this verification is a computer running Tails - [The Amnesic Incognito Live System](https://tails.boum.org/), preferable without any network connection and no hard drives. Do not use your actual dice rolls on a normal desktop system as that will completely comprise the security of your ColdCard!
 
@@ -243,7 +243,7 @@ The returned data will be a list of 24 words that should match the ones written 
 Now the 24-word seed phrase has been independently verified and the ColdCard can be trusted to be doing what it purports to be doing. Once your curiosity has been satisfied that everything is working as expected and advertised, now repeat the process with you actual dice rolls on the ColdCard and do not enter them into the computer when you're done.
 
 ## Generating a seed phrase with 256 bit of entropy by dice rolls
-There are a couple considerations you may want to make when creating a seed phrase. For example, ColdCard will generate a seed phrase for you by default, as demonstrated in the [Ultra Quick guide](https://github.com/econoalchemist/ColdCard-UltraQuick). However, maybe you don't trust the True Random Number Generator (TRNG) in your ColdCard, you can introduce some of your own randomness using a six sided dice and combine that with the ColdCard's TRNG entropy as demonstrated in the [Middle Ground guide](https://github.com/econoalchemist/ColdCard-MiddleGround). In this guide though, you'll see how to generate a full 256 bits of entropy with dice rolls now that you have verfied the dice roll math is doing what it purports to be doing.
+There are a couple considerations you may want to make when creating a seed phrase. For example, ColdCard will generate a seed phrase for you by default, as demonstrated in the [Ultra Quick guide](https://github.com/econoalchemist/ColdCard-UltraQuick). However, maybe you don't trust the True Random Number Generator (TRNG) in your ColdCard, you can introduce some of your own randomness using a six sided dice and combine that with the ColdCard's TRNG entropy as demonstrated in the [Middle Ground guide](https://github.com/econoalchemist/ColdCard-MiddleGround). In this guide though, you'll see how to generate a full 256 bits of entropy with dice rolls now that you have verified the dice roll math is doing what it purports to be doing.
 
 Starting at the ColdCard main menu. Select `New Wallet` and after a moment you will be presented with 24 words. However, to use your own dice roll randomness, scroll down to the bottom of the word list and select <kbd>4</kbd> to add at least 99 dice rolls.
 
@@ -281,7 +281,7 @@ A passphrase can be thought of as a "25th word" that only you know. The passphra
 
 Important to note is that any passphrase entered will generate a fully functional and valid wallet, whether this wallet contains the keys to your bitcoin depends on your ability to enter the exact same passphrase again. Ensure that you write down your passphrase correctly. There is absolutely no way for the ColdCard to know what your passphrase is. There is no way to recover a lost or forgotten passphrase. 
 
-When you add a passphrase to a 24-word seed phrase, the new wallet will have its own fingerprint. This fingerprint can be used to verify that you have entered your passphrase correctly. You can start to see how this adds some complexity to securing your bitcoin. Keep this in mind and what your threat model is. Ask yourself how you will secure your recovery information, and how your loved ones would recovery your bitcoin if you were gone.
+When you add a passphrase to a 24-word seed phrase, the new wallet will have its own fingerprint. This fingerprint can be used to verify that you have entered your passphrase correctly. You can start to see how this adds some complexity to securing your bitcoin. Keep this in mind and what your threat model is. Ask yourself how you will secure your recovery information, and how your loved ones would recover your bitcoin if you were gone.
 
 From the main menu, select `Passphrase`, then you will see a short explanation that warns you about how passphrases are not recoverable so if you lose your passphrase then you will lose access to your funds. It also warns you that any passphrase you enter will generate a completely separate wallet. After reading through the warning select <kbd>OK</kbd> to continue, then select `Edit Phrase` and you have a few options of passphrases you can enter: 
 
@@ -305,14 +305,14 @@ Once you have entered the passphrase you want, select `APPLY` then you will be p
   <img width="450" height="338" src="Assets/IMG_5715.JPG">
 </p>
 
-At this point, it is best practice to double check your work by trying to regenerate this fingerprint. If you have properly documented everything, then you should be able to log out of the ColdCard, power it down, power it back on, log in again, re-apply the passphrase and get the same fingerprint from the wallet. If everything checksout then make sure you secure your passphrase and your 24-word seed phrase in a way that satisfies your unique threat model. 
+At this point, it is best practice to double check your work by trying to regenerate this fingerprint. If you have properly documented everything, then you should be able to log out of the ColdCard, power it down, power it back on, log in again, re-apply the passphrase and get the same fingerprint from the wallet. If everything checks out then make sure you secure your passphrase and your 24-word seed phrase in a way that satisfies your unique threat model. 
 
 Next, you will see how to download and verify Sparrow Wallet. 
 
 ## Verifying the Sparrow Wallet Download
 Sparrow Wallet is a Bitcoin wallet designed to be connected with your own node and ran from your desktop or laptop computer. This is a user-friendly wallet with an intuitive interface and many advanced features for a range of capabilities. To learn more about Sparrow Wallet and for installation instructions, visit the [Sparrow Wallet website](https://www.sparrowwallet.com/).
 
-In this section you will see how to verify the integrity of the Sparrow Wallet download on a Windows desktop using Kleopatra OpenPGP from the [GPG4win](https://www.gpg4win.org/download.html) bundle. If you are using a Linux distrobution, you will want to use [GnuPG](https://gnupg.org/download/index.html). Or if you are using a Mac, you will want to use [GPGtools](https://gpgtools.org/). The basic process here is to save the PGP signed hash values of the releases and verify them with [Craig Raw's](https://twitter.com/craigraw) PGP public key and then calculate your own hash value on the firmware file to confirm.
+In this section you will see how to verify the integrity of the Sparrow Wallet download on a Windows desktop using Kleopatra OpenPGP from the [GPG4win](https://www.gpg4win.org/download.html) bundle. If you are using a Linux distribution, you will want to use [GnuPG](https://gnupg.org/download/index.html). Or if you are using a Mac, you will want to use [GPGtools](https://gpgtools.org/). The basic process here is to save the PGP signed hash values of the releases and verify them with [Craig Raw's](https://twitter.com/craigraw) PGP public key and then calculate your own hash value on the firmware file to confirm.
 
 The first step is to add Craig's PGP public key to your keychain. You can download his public key from KeyBase [here](https://keybase.io/craigraw/). If you are using Kleopatra, you can just copy the PGP public key to your clipboard and then navigate to `Tools` > `Clipboard` > `Certificate Import`. Then you can certify the PGP public key. 
 
@@ -321,7 +321,7 @@ The first step is to add Craig's PGP public key to your keychain. You can downlo
   <img width="950" height="496" src="Assets/Sparrow38.png">
 </p>
 
-Once you have the certificate import complete, navigate to the [Sparrow Wallet download page](https://sparrowwallet.com/download/) where you will want to download the appropriate Sparrow Wallet filefor your operating system as well as the `Manifest` & `Manifest Signature` files. 
+Once you have the certificate import complete, navigate to the [Sparrow Wallet download page](https://sparrowwallet.com/download/) where you will want to download the appropriate Sparrow Wallet file for your operating system as well as the `Manifest` & `Manifest Signature` files. 
 
 <p align="center">
   <img width="950" height="481" src="Assets/Sparrow39.png">
@@ -350,14 +350,14 @@ Now you can double-click on the Sparrow Wallet `.exe` file and launch the instal
 Next we'll get the ColdCard configured as a "watch-only" wallet in Sparrow Wallet and demonstrate how to transact in an air-gapped fashion. 
 
 ## Connecting ColdCard to Sparrow Wallet
-In this section you will see how to connect your ColdCard to Sparrow Wallet using a your own Electrum Rust Server connected over Tor. If you don't have your own Electrum Rust Server, you can use BitcoinCore as a backend as demonstrated in the [MiddleGround guide](https://github.com/econoalchemist/ColdCard-MiddleGround). However, BitcoinCore stores your wallet balances and xpub unencrypted on your desktop. Or if you don't have your own Bitcoin node, you can use reputable public Electrum servers as demonstrated in the [UltraQuick guide](https://github.com/econoalchemist/ColdCard-UltraQuick). However, there are privacy tradeoffs that come with using the convenience of a public Electrum server. Luckily there are a number of resources avilable to help you spin up your own Bitcoin node, to learn more check out:
+In this section you will see how to connect your ColdCard to Sparrow Wallet using a your own Electrum Rust Server connected over Tor. If you don't have your own Electrum Rust Server, you can use BitcoinCore as a backend as demonstrated in the [MiddleGround guide](https://github.com/econoalchemist/ColdCard-MiddleGround). However, BitcoinCore stores your wallet balances and xpub unencrypted on your desktop. Or if you don't have your own Bitcoin node, you can use reputable public Electrum servers as demonstrated in the [UltraQuick guide](https://github.com/econoalchemist/ColdCard-UltraQuick). However, there are privacy tradeoffs that come with using the convenience of a public Electrum server. Luckily there are a number of resources available to help you spin up your own Bitcoin node, to learn more check out:
 
 - [RaspiBlitz](https://github.com/rootzoll/raspiblitz)
 - [Bitcoin.org](https://bitcoin.org/en/bitcoin-core/)
 - [Ministry of Nodes](https://www.ministryofnodes.com.au/) 
-- [Soarrow Wallet Documentation](https://www.sparrowwallet.com/docs/connect-node.html)
+- [Sparrow Wallet Documentation](https://www.sparrowwallet.com/docs/connect-node.html)
 
-In this guide, RaspiBlitz will be demonstrated as the provider of the Electrum Rust server. Not because this has anything to do with Lightning, only because RaspiBlitz is an easy to install and stable Bitcoin node that features Electrum Rust server capabilities that are really easy to configure with Sparrow Wallet. Unlike BitcoinCore though, RaspiBlitz is designed to be run on the ARM64 archetecture as you would find in singleboard computers such as a RaspberryPi. [Here](https://www.econoalchemist.com/post/build-a-self-custodial-lightning-node-with-raspiblitz) is a guide on building a RaspiBlitz if you need it. Once you have your Bitcoin node ready, there are a couple steps needed to configure it to work with Sparrow Wallet. 
+In this guide, RaspiBlitz will be demonstrated as the provider of the Electrum Rust server. Not because this has anything to do with Lightning, only because RaspiBlitz is an easy to install and stable Bitcoin node that features Electrum Rust server capabilities that are really easy to configure with Sparrow Wallet. Unlike BitcoinCore though, RaspiBlitz is designed to be run on the ARM64 architecture as you would find in single-board computers such as a RaspberryPi. [Here](https://www.econoalchemist.com/post/build-a-self-custodial-lightning-node-with-raspiblitz) is a guide on building a RaspiBlitz if you need it. Once you have your Bitcoin node ready, there are a couple steps needed to configure it to work with Sparrow Wallet. 
 
 Since RaspiBlitz is running on a remote computer, you need to SSH into the RaspberryPi and gather some information. First, you need to initiate Electrum Rust Server which can take several hours as it indexes the entire blockchain. From your RaspiBlitz main menu, scroll down to and select `SERVICES`> `BTC Electrum Rust Server`. Then follow the prompts to initiate the indexing and give the operation plenty of time to run.   
 
