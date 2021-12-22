@@ -494,6 +494,9 @@ At the time of broadcast you should see the transaction notification in Sparrow 
 
 The main point here is that your ColdCard is the required signing device while your Sparrow Wallet is your interface, transaction builder, & broadcaster. In this configuration, Sparrow Wallet can do many things like catalog addresses and build transactions but without the signature from your ColdCard, Sparrow Wallet cannot authorize spending of any of your bitcoin. 
 
-Not only is your bitcoin secured by your air-gapped ColdCard, but the interface you use to interact with it is backed by your own private Electrum Rust Server over Tor. Another recent capability implemented in Sparrow Wallet is Whirlpool CoinJoins. You can configure Sparrow Wallet to deposit your CoinJoined outputs directly to your ColdCard. This topic goes beyond the scope of this guide but keep in mind that there are a range of features and capabilities for both ColdCard and Sparrow wallet that are not covered here. 
+Not only is your bitcoin secured by your air-gapped ColdCard, but the interface you use to interact with it is backed by your own private Electrum Rust Server over Tor. Another recent capability implemented in Sparrow Wallet is Whirlpool CoinJoins. You can configure Sparrow Wallet to deposit your CoinJoined outputs directly to your ColdCard. This topic goes beyond the scope of this guide but keep in mind that there are a range of features and capabilities for both ColdCard and Sparrow wallet that are not covered here. To learn more about an advanced feature in ColdCard called Seed XOR, check out [this](https://www.econoalchemist.com/post/coldcard-seed-xor) guide. Also, to learn more about Sparrow Wallet & Whirlpool, check out [this](https://www.sparrowwallet.com/docs/mixing-whirlpool.html) guide.
 
 ## Steel plate backup demonstration
+Steel plates offer a simple solution for securing your recovery information in a medium that can with stand environmental hazards such as fire and flooding. The basic idea here is that the wallet seed phrase will be imprinted on a stainless steel plate. 
+
+  
