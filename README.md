@@ -468,9 +468,9 @@ To create a PSBT, navigate to the <kbd>Send</kbd> tab on the left-hand side in S
 Insert the microSD card into the COLDCARD. If necessary, power on your COLDCARD using the COLDPOWER 9v battery adaptor or USB adaptor. Then enter your COLDCARD PIN prefix, verify your anti-phishing words, and enter the PIN suffix. Enter and apply your passphrase, double check the fingerprint, then from the main menu choose `Ready to Sign`. Then the details of the PSBT will be displayed and you can confirm that the address and the amount and the miners fee are correct.    
 
 <p align="center">
-  <img width="300" height="236" src="Assets/IMG_5831.JPG">
-  <img width="315" height="236" src="Assets/IMG_5839.JPG">
-  <img width="300" height="236" src="Assets/OK2sign.JPG">
+  <img width="300" height="270" src="Assets/IMG_5831.JPG">
+  <img width="300" height="258" src="Assets/IMG_5839.JPG">
+  <img width="300" height="196" src="Assets/OK2sign.jpg">
   </p>
   
 Then hit <kbd>OK</kbd> to sign. Once the file is signed it will be saved as a new file to the microSD card appended with `-signed.psbt`. You can then eject the microSD card and securely log out of your Cold Card and power it down. 
