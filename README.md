@@ -486,10 +486,14 @@ Eject the microSD card from the ColdCard, insert to the USB adaptor, insert the 
   <img width="814" height="611" src="Assets/Sparrow60.png">
 </p>
                                                           
-At the time of broadcast you should see the transaction in BitcoinCore as well as receive a notification in Sparrow Wallet. Again, you can copy the transaction ID and paste in your preferred block explorer to watch for confirmations.
+At the time of broadcast you should see the transaction notification in Sparrow Wallet. Again, you can copy the transaction ID and paste in your preferred block explorer to watch for confirmations.
                                                           
 <p align="center">
-  <img width="950" height="410" src="Assets/Sparrow36.png">
+  <img width="950" height="410" src="Assets/Sparrow62.png">
 </p>
 
 The main point here is that your ColdCard is the required signing device while your Sparrow Wallet is your interface, transaction builder, & broadcaster. In this configuration, Sparrow Wallet can do many things like catalog addresses and build transactions but without the signature from your ColdCard, Sparrow Wallet cannot authorize spending of any of your bitcoin. 
+
+Not only is your bitcoin secured by your air-gapped ColdCard, but the interface you use to interact with it is backed by your own private Electrum Rust Server over Tor. Another recent capability implemented in Sparrow Wallet is Whirlpool CoinJoins. You can configure Sparrow Wallet to deposit your CoinJoined outputs directly to your ColdCard. This topic goes beyond the scope of this guide but keep in mind that there are a range of features and capabilities for both ColdCard and Sparrow wallet that are not covered here. 
+
+
