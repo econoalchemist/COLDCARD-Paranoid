@@ -526,4 +526,5 @@ Double check your work then use a spring-loaded punch to stamp the plate on each
 
 Now you have a robust stainless steel backup that can withstand fire and flood. This backup plate is easy to conceal measuring in at 127mm X 76mm x 1.5mm so that it can be hidden in a variety of places and environments. 
 
-  
+## Conclusion
+That is all for this guide. You should have the knowledge now to check your tamper-evident bag, verify & update the firmware, setup a PIN, verify the dice roll math, create a seed phrase with your own randomness, create a passphrase, verify Sparrow Wallet, connect it with your own private Electrum Rust Server over Tor, as well how to import a watch-only wallet to Sparrow wallet and make some air-gapped transactions, and have some ideas about a robust stainless steel backup solution. Be sure to power down your ColdCard, disconnect it, and secure it in a safe place and keep your backup information in a separate location.   
