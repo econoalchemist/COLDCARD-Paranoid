@@ -513,15 +513,15 @@ Use a marker to indicate the first 4-letters of the first 12-words on one side o
 
 <p align="center">
   <img width="950" height="713" src="Assets/IMG_6689.JPG">
-  <img width="950" height="713" src="Assets/IMG_6690.JPG">
-  <img width="950" height="713" src="Assets/IMG_6691.JPG">
+  <img width="950" height="542" src="Assets/IMG_6690.JPG">
+  <img width="950" height="524" src="Assets/IMG_6691.JPG">
 </p>  
  
 Double check your work then use a spring-loaded punch to stamp the plate on each mark.
   
   <img width="950" height="713" src="Assets/IMG_6692.JPG">
-  <img width="950" height="713" src="Assets/IMG_6693.JPG">
-  <img width="950" height="713" src="Assets/IMG_6695.JPG">
+  <img width="950" height="545" src="Assets/IMG_6693.JPG">
+  <img width="950" height="542" src="Assets/IMG_6695.JPG">
 </p>
 
 Now you have a robust stainless steel backup that can withstand fire and flood. This backup plate is easy to conceal measuring in at 127mm X 76mm x 1.5mm so that it can be hidden in a variety of places and environments. 
