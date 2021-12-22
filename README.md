@@ -489,7 +489,8 @@ Eject the microSD card from the ColdCard, insert to the USB adaptor, insert the 
 At the time of broadcast you should see the transaction notification in Sparrow Wallet. Again, you can copy the transaction ID and paste in your preferred block explorer to watch for confirmations.
                                                           
 <p align="center">
-  <img width="950" height="410" src="Assets/Sparrow62.png">
+  <img width="950" height="731" src="Assets/Sparrow62.png">
+  <img width="950" height="328" src="Assets/Sparrow63.png">
 </p>
 
 The main point here is that your ColdCard is the required signing device while your Sparrow Wallet is your interface, transaction builder, & broadcaster. In this configuration, Sparrow Wallet can do many things like catalog addresses and build transactions but without the signature from your ColdCard, Sparrow Wallet cannot authorize spending of any of your bitcoin. 
