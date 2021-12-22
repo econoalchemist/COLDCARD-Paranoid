@@ -465,25 +465,25 @@ To create a PSBT, navigate to the <kbd>Send</kbd> tab on the left-hand side in S
   <img width="315" height="225" src="Assets/Sparrow59.png">
   </p>
   
-Insert the microSD card into the ColdCard. If necessary, power on your ColdCard using the ColdPower 9v battery adaptor or USB adaptor. Then enter your ColdCard PIN prefix, verify your anti-phishing words, and enter the PIN suffix. From the main menu choose `Ready to Sign`. Then the details of the PSBT will be displayed and you can confirm that the address and the amount and the miners fee are correct.    
+Insert the microSD card into the ColdCard. If necessary, power on your ColdCard using the ColdPower 9v battery adaptor or USB adaptor. Then enter your ColdCard PIN prefix, verify your anti-phishing words, and enter the PIN suffix. Enter and apply your passphrase, double check the fingerprint, then from the main menu choose `Ready to Sign`. Then the details of the PSBT will be displayed and you can confirm that the address and the amount and the miners fee are correct.    
 
 <p align="center">
   <img width="300" height="236" src="Assets/IMG_5831.JPG">
   <img width="315" height="236" src="Assets/IMG_5839.JPG">
-  <img width="300" height="236" src="Assets/IMG_5847.JPG">
+  <img width="300" height="236" src="Assets/OK2sign.JPG">
   </p>
   
-Then hit <kbd>OK</kbd> to sign. Once the file is signed it will be saved as a new file to the microSD card. You can then eject the microSD card and securely log out of your Cold Card and power it down. 
+Then hit <kbd>OK</kbd> to sign. Once the file is signed it will be saved as a new file to the microSD card appended with `-signed.psbt`. You can then eject the microSD card and securely log out of your Cold Card and power it down. 
  
 <p align="center">
   <img width="600" height="473" src="Assets/IMG_5870.JPG">
 </p>
 
-Eject the microSD card from the ColdCard, insert to the USB adaptor, insert the adaptor into the desktop computer. Ensure BitcoinCore and Sparrow Wallet are open. Then from the file explorer, simply double-click on the signed PSBT file and it should open automatically in Sparrow Wallet. Alternatively, from Sparrow Wallet navigate to `File` > `Open Transaction` then choose `File` from the menu of options and navigate to the file location of the signed PSBT. Either way, then click on the <kbd>Broadcast Transaction</kbd> button to send the signed transaction to the Bitcoin Network. 
+Eject the microSD card from the ColdCard, insert to the USB adaptor, insert the adaptor into the desktop computer. Ensure Sparrow Wallet is open. Then from the file explorer, simply double-click on the signed PSBT file and it should open automatically in Sparrow Wallet. Alternatively, from Sparrow Wallet navigate to `File` > `Open Transaction` then choose `File` from the menu of options and navigate to the file location of the signed PSBT. Either way, then click on the <kbd>Broadcast Transaction</kbd> button to send the signed transaction to the Bitcoin Network. 
 
 <p align="center">
-  <img width="814" height="611" src="Assets/Sparrow35.png">
-  <img width="814" height="611" src="Assets/Sparrow34.png">
+  <img width="814" height="611" src="Assets/Sparrow61.png">
+  <img width="814" height="611" src="Assets/Sparrow60.png">
 </p>
                                                           
 At the time of broadcast you should see the transaction in BitcoinCore as well as receive a notification in Sparrow Wallet. Again, you can copy the transaction ID and paste in your preferred block explorer to watch for confirmations.
