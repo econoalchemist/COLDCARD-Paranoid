@@ -496,4 +496,4 @@ The main point here is that your ColdCard is the required signing device while y
 
 Not only is your bitcoin secured by your air-gapped ColdCard, but the interface you use to interact with it is backed by your own private Electrum Rust Server over Tor. Another recent capability implemented in Sparrow Wallet is Whirlpool CoinJoins. You can configure Sparrow Wallet to deposit your CoinJoined outputs directly to your ColdCard. This topic goes beyond the scope of this guide but keep in mind that there are a range of features and capabilities for both ColdCard and Sparrow wallet that are not covered here. 
 
-
+## Steel plate backup demonstration
