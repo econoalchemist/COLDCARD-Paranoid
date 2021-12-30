@@ -173,6 +173,7 @@ Use a marker to indicate the first 4-letters of the first 12-words on one side o
  
 Double check your work then use a spring-loaded punch to stamp the plate on each mark.
   
+<p align="center">  
   <img width="950" height="713" src="Assets/IMG_6692.JPG">
   <img width="950" height="545" src="Assets/IMG_6693.JPG">
   <img width="950" height="542" src="Assets/IMG_6695.JPG">
