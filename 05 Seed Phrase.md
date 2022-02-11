@@ -4,15 +4,15 @@ There are a couple considerations you may want to make when creating a seed phra
 Starting at the COLDCARD main menu. Select `Import Existing` > `Dice Rolls` Once there, the `0 rolls` screen will always be displayed with the sha256 hash value of an empty string, `e3b0c... 27ae4... b855`. The keys 1-6 can be used to enter the values that correspond to the results of each dice roll.
 
 <p align="center">
-  <img width="450" src="Assets/IMG_4804.jpg">
-  <img width="450" src="Assets/IMG_4805.jpg">
+  <img width="450" src="Assets/IMG_4804.JPG">
+  <img width="450" src="Assets/IMG_4805.JPG">
 </p>
 
 Entropy is calculated by using: `log2(6) = 2.58`. Where the `6` is the number of sides on the dice. For reference, it would take the world's most powerful super computer trillions of years to brute force a 256 bit key. Start rolling the dice and enter the corresponding number for each roll. Repeat this process at least 99 times for the full 256 bits of entropy.
 
 <p align="center">
- <img width="450" src="Assets/IMG_4806.jpg">
- <img width="450" src="Assets/IMG_4812.jpg">
+ <img width="450" src="Assets/IMG_4806.JPG">
+ <img width="450" src="Assets/IMG_4812.JPG">
 </p>  
 
 Once you are satisfied with the number of rolls hit <kbd>OK</kbd>. Now you will be presented with a new list of 24 words. Write these words down in order on your notecard. Then double check your work. 
